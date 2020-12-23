@@ -13,15 +13,19 @@ namespace HackerRank.Classes
             int count = 0;
             for (int a = 0; a < candles.Count; a++)
             {
-                for(int b = 0; b < candles.Count; b++)
+                if(candles[a] >= max)
                 {
-                    if (a == b)
-                        continue;
-                    if(candles[b] > candles[a])
-                    {
-                        count++;
-                    }
+                    count++;
                 }
+                //for(int b = 0; b < candles.Count; b++)
+                //{
+                //    if (a == b)
+                //        continue;
+                //    if(candles[b] > candles[a])
+                //    {
+                //        count++;
+                //    }
+                //}
             }
             return count;
         }
